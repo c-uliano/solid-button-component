@@ -37,3 +37,69 @@ const buttonStyles = `${styles.button} ${styles[state().variant]} ${styles[state
 ### I asked ChatGPT to create a button component with typescript interface
 
 https://chat.openai.com/share/ab3b219b-efb8-4f15-b9dd-ffb7115489b3
+
+```typescript
+// Button.tsx
+
+import { createSignal } from "solid-js";
+import type { JSX } from "solid-js/jsx-runtime";
+
+interface ButtonProps {
+  onClick: () => void;
+  text: string;
+  size?: "small" | "medium" | "large";
+  variant?: "primary" | "secondary" | "default";
+  showIcon?: boolean;
+}
+
+const Button = (props: ButtonProps) => {
+  const [count, setCount] = createSignal(0);
+
+  const handleClick = () => {
+    props.onClick();
+    setCount(count() + 1);
+  };
+
+  const getSizeClass = () => {
+    switch (props.size) {
+      case "small":
+        return "btn-small";
+      case "medium":
+        return "btn-medium";
+      case "large":
+        return "btn-large";
+      default:
+        return "";
+    }
+  };
+
+  const getVariantClass = () => {
+    switch (props.variant) {
+      case "primary":
+        return "btn-primary";
+      case "secondary":
+        return "btn-secondary";
+      default:
+        return "btn-default";
+    }
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      class={`btn ${getSizeClass()} ${getVariantClass()}`}
+    >
+      {props.showIcon && <span className="icon">🚀</span>}
+      {props.text} - Clicked: {count()}
+    </button>
+  );
+};
+
+export default Button;
+```
+
+```css
+<Button onClick={handleClick} text="Button with Icon" showIcon={true} />
+<Button onClick={handleClick} text="Button without Icon" showIcon={false} />
+
+```
