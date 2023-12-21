@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main>
       <Title>Solid Button Component</Title>
-      <h1>Hello world!</h1>
+      <h1>Home page</h1>
       {/* <Counter /> */}
-      <Button />
+      <Button text={'Hello'} />
       <p>
         Visit{" "}
         <a href="https://start.solidjs.com" target="_blank">

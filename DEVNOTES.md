@@ -42,7 +42,6 @@ https://chat.openai.com/share/ab3b219b-efb8-4f15-b9dd-ffb7115489b3
 // Button.tsx
 
 import { createSignal } from "solid-js";
-import type { JSX } from "solid-js/jsx-runtime";
 
 interface ButtonProps {
   onClick: () => void;

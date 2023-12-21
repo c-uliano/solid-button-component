@@ -7,7 +7,7 @@ export default function Home() {
       <Title>Solid Button Component</Title>
       <h1>The About Page</h1>
       <h3>Below is the Button</h3>
-      <Button />
+      <Button text={'Hey There'} />
 
     </main>
   );
