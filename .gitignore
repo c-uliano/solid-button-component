@@ -5,6 +5,8 @@ dist
 .vercel
 .netlify
 netlify
+DEVNOTES.md
+TODO.md
 
 # Environment
 .env
