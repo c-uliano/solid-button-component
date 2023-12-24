@@ -8,14 +8,7 @@ export default function Home() {
       <Title>Solid Button Component</Title>
       <h1>Home page</h1>
       {/* <Counter /> */}
-      <Button text={'Hello'} />
-      <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
-        to learn how to build SolidStart apps.
-      </p>
+      <Button text={'Hello'} variant={'primary'} />
     </main>
   );
 }

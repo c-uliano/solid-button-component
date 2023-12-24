@@ -1,7 +1,7 @@
 import { Title } from "solid-start";
 import Button from "~/components/Button/Button";
 
-export default function Home() {
+export default function About() {
   return (
     <main>
       <Title>Solid Button Component</Title>
