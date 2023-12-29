@@ -7,8 +7,6 @@ export type Variant =
     'primary' |
     'secondary';
 
-export type Uppercase = 'upper';
-
 export type BRadius = 
     'br-default' |
     'br-round';
