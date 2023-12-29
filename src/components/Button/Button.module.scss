@@ -17,4 +17,8 @@
         background: $secondary;
         border-color: $secondary;
     }
+
+    &.uppercase {
+        text-transform: uppercase;
+    }
 }

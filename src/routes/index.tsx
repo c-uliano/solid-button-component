@@ -8,7 +8,7 @@ export default function Home() {
       <Title>Solid Button Component</Title>
       <h1>Home page</h1>
       {/* <Counter /> */}
-      <Button text={'Hello'} variant={'primary'} />
+      <Button text={'Hello'} variant={'primary'} uppercase={true} />
     </main>
   );
 }

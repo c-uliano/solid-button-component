@@ -6,7 +6,7 @@ export interface ButtonProps {
     text: string;
     variant?: Variant;
     size?: Size;
-    case?: Uppercase;
+    uppercase?: boolean; // change this to a boolean?
     borderRadius?: BRadius;
     active?: boolean;
 }
@@ -21,19 +21,26 @@ const Button = (props: ButtonProps) => {
     // });
     // const buttonStyles = `${styles.button} ${styles[styles().variant]} ${styles[styles().size]}`;
 
+    // const buttonObj = {
+    //     text: props.text,
+    //     variant: props.variant || '',
+    //     size: props.size || 'md',
+    //     uppercase: props.uppercase || '',
+    //     borderRadius: props.borderRadius
+    // }
+
     const buttonObj = {
-        text: props.text,
-        variant: props.variant || '',
-        size: props.size || 'md',
-        case: props.case || '',
+        variant: props.variant ? `${styles[props.variant]}` : '',
+        size: props.size ? `${styles[props.size]}` : 'md',
+        uppercase: props.uppercase || '',
         borderRadius: props.borderRadius
     }
-
-    const buttonStyles = `${styles.button} ${styles[buttonObj.variant]} ${styles[buttonObj.size]} ${styles[buttonObj.case]}`;
+    const buttonStyles = `${styles.button} ${styles[buttonObj.variant]} ${styles[buttonObj.size]} ${buttonObj.uppercase && styles.uppercase}`;
 
     return (
         <a class={buttonStyles}>
-            {buttonObj.text}
+            {/* {buttonObj.text} */}
+            {props.text}
         </a>
     )
 }
