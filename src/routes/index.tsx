@@ -9,6 +9,8 @@ export default function Home() {
       <h1>Home page</h1>
       {/* <Counter /> */}
       <Button text={'Hello'} variant={'primary'} uppercase={true} />
+      <Button text={'Test 2'} />
+      <Button text={'A Link'} href={'#'} />
     </main>
   );
 }

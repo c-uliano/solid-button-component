@@ -8,7 +8,8 @@ export type Variant =
     'secondary';
 
 export type BRadius = 
-    'br-default' |
+    'br-slight' |
+    'br-curved' |
     'br-round';
 
 export type Size =

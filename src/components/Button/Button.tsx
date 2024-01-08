@@ -9,6 +9,7 @@ export interface ButtonProps {
     uppercase?: boolean;
     borderRadius?: BRadius;
     active?: boolean;
+    href?: string;
 }
 
 const Button = (props: ButtonProps) => {
@@ -38,13 +39,21 @@ const Button = (props: ButtonProps) => {
         props.variant && styles[props.variant],
         props.size ? styles[props.size] : styles.md,
         props.uppercase && styles.uppercase,
-        props.borderRadius ? styles[props.borderRadius] : styles['br-default']
+        props.borderRadius && styles[props.borderRadius]
     ].join(' ');
 
     return (
-        <a class={buttonObj}>
-            {props.text}
-        </a>
+        <>
+            {props.href ? (
+                <a class={buttonObj}>
+                    {props.text}
+                </a>
+            ) : (
+                <button class={buttonObj}>
+                    {props.text}
+                </button>
+            )}
+        </>
     )
 }
 
