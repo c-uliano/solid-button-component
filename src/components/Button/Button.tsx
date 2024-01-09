@@ -10,30 +10,10 @@ export interface ButtonProps {
     borderRadius?: BRadius;
     active?: boolean;
     href?: string;
+    onClick?: MouseEvent;
 }
 
 const Button = (props: ButtonProps) => {
-
-    // * doesn't need to be state since it's not like the styles will be changing with interaction.
-    // const [styles, setStyles] = createSignal({
-    //     text: props.text,
-    //     variant: props.variant || '',
-    //     size: props.size || 'md'
-    // });
-    // const buttonStyles = `${styles.button} ${styles[styles().variant]} ${styles[styles().size]}`;
-    // *
-
-    // ? next tried an object, but had to put everything that was a class into a variable and then apply that to the element. Was double the work, need to find a simplier way to maintain the styles.
-    // const buttonObj = {
-    //     text: props.text,
-    //     variant: props.variant || '',
-    //     size: props.size || 'md',
-    //     uppercase: props.uppercase || '',
-    //     borderRadius: props.borderRadius
-    // }
-    // const buttonStyles = `${styles.button} ${styles[buttonObj.variant]} ${styles[buttonObj.size]} ${buttonObj.uppercase && styles.uppercase}`;
-    // ?
-
     const buttonObj = [
         styles.button,
         props.variant && styles[props.variant],
