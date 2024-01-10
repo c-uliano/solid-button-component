@@ -10,7 +10,7 @@ export interface ButtonProps {
     borderRadius?: BRadius;
     active?: boolean;
     href?: string;
-    onClick?: MouseEvent;
+    onClick?: (e:MouseEvent) => void;
 }
 
 const Button = (props: ButtonProps) => {
