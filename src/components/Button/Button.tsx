@@ -8,7 +8,7 @@ export interface ButtonProps {
     size?: Size;
     uppercase?: boolean;
     borderRadius?: BRadius;
-    active?: boolean;
+    disabled?: boolean;
     href?: string;
     onClick?: (e:MouseEvent) => void;
 }
@@ -19,7 +19,7 @@ const Button = (props: ButtonProps) => {
         props.variant && styles[props.variant],
         props.size ? styles[props.size] : styles.md,
         props.uppercase && styles.uppercase,
-        props.borderRadius && styles[props.borderRadius]
+        props.borderRadius && styles[props.borderRadius],
     ].join(' ');
 
     return (
@@ -29,7 +29,7 @@ const Button = (props: ButtonProps) => {
                     {props.text}
                 </a>
             ) : (
-                <button class={buttonObj}>
+                <button class={buttonObj} disabled={props.disabled}>
                     {props.text}
                 </button>
             )}
