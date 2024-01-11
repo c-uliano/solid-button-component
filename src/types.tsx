@@ -1,11 +1,16 @@
-export type VariantOutline =
-    'primary-outline' |
-    'secondary-outline';
+// export type VariantOutline =
+//     'primary-outline' |
+//     'secondary-outline';
+
+// export type Variant = 
+//     VariantOutline |
+//     'primary' |
+//     'secondary';
 
 export type Variant = 
-    VariantOutline |
-    'primary' |
-    'secondary';
+    'text' |
+    'contained' |
+    'outlined';
 
 export type BRadius = 
     'br-slight' |

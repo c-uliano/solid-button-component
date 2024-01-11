@@ -1,12 +1,12 @@
 @import "/src/_colors";
 
 .button {
-    background: black;
-    border: 2px solid black;
-    color: white;
+    color: black;
     padding: 4px 8px;
     cursor: pointer;
     border-radius: .25rem;
+    border: none;
+    background: transparent;
 
     &:hover, &:active, &:focus {
 
@@ -15,6 +15,16 @@
     &[disabled] {
         pointer-events: none;
         opacity: .5;
+    }
+
+    &.contained {
+        background-color: black;
+        border: 2px solid black;
+        color: white;
+    }
+
+    &.outlined {
+        border: 2px solid black;
     }
 
     &.primary {
