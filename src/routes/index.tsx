@@ -10,7 +10,7 @@ export default function Home() {
             {/* <Counter /> */}
             <Button text={'Disabled'} variant={'text'} uppercase={true} disabled={true} />
             <Button text={'Hello'} variant={'text'} uppercase={true} />
-            <Button text={'Test 2'} variant={'contained'} />
+            <Button text={'Test 2'} color={'warning'} variant={'contained'} />
             <Button text={'A Link'} href={'#'} variant={'outlined'} />
         </main>
     );

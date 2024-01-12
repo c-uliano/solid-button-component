@@ -1,11 +1,11 @@
 import { createSignal } from 'solid-js';
 import styles from './Button.module.scss';
-import { Variant, BRadius, Size} from '~/types';
+import { Variant, BRadius, Size, Color} from '~/types';
 
 export interface ButtonProps {
     text: string;
     variant?: Variant;
-    color?: string; // whatever you enter has to have a class by that same name to style it up
+    color?: Color; // whatever you enter has to have a class by that same name to style it up
     size?: Size;
     uppercase?: boolean;
     borderRadius?: BRadius;
@@ -18,6 +18,7 @@ const Button = (props: ButtonProps) => {
     const buttonObj = [
         styles.button,
         props.variant && styles[props.variant],
+        props.color && styles[props.color],
         props.size && styles[props.size],
         props.uppercase && styles.uppercase,
         props.borderRadius && styles[props.borderRadius],

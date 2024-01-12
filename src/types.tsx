@@ -12,6 +12,11 @@ export type Variant =
     'contained' |
     'outlined';
 
+export type Color = 
+'warning' |
+'success' |
+string;
+
 export type BRadius = 
     'br-slight' |
     'br-curved' |

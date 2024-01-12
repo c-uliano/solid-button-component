@@ -7,9 +7,10 @@
     border-radius: .25rem;
     border: none;
     background: transparent;
+    transition: .25s ease;
 
     &:hover, &:active, &:focus {
-
+        background-color: $default-50;
     }
 
     &[disabled] {
@@ -17,24 +18,29 @@
         opacity: .5;
     }
 
+    
+    &.success {
+        background-color: $success;
+        border-color: $success;
+    }
+    
     &.contained {
         background-color: black;
         border: 2px solid black;
         color: white;
+        
+        &:hover, &:active, &:focus {
+            background-color: $default-50;
+        }
     }
-
+    
     &.outlined {
         border: 2px solid black;
     }
-
-    &.primary {
-        background: $primary;
-        border-color: $primary;
-    }
-
-    &.secondary {
-        background: $secondary;
-        border-color: $secondary;
+    
+    &.warning {
+        background-color: $warning;
+        border-color: $warning;
     }
 
     &.uppercase {
