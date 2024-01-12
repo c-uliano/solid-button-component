@@ -3,7 +3,7 @@
 Creating a SolidJS Button component that is highly customizable
 
 ## Customizations includes: 
-- <a> or <button>
+- anchor or button
 - text
 - text case
 - button variant
