@@ -16,7 +16,7 @@ export default function Home() {
                     <Button text={'Lg Buton'} variant={'text'} uppercase={true} size={'lg'} />
                 </div>
                 <div style={{'margin': '0 5px'}}>
-                    <Button text={'Test 2'} color={'warning'} variant={'contained'} />
+                    <Button text={'Test 2'} showIcon={true} color={'warning'} variant={'contained'} />
                 </div>
                 <div style={{'margin': '0 5px'}}>
                     <Button text={'A Link'} href={'#'} variant={'outlined'} />

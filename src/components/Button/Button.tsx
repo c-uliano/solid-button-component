@@ -29,12 +29,12 @@ const Button = (props: ButtonProps) => {
         <>
             {props.href ? (
                 <a class={buttonObj}>
-                    {props.showIcon && <span class="icon">🚀</span>}
+                    {props.showIcon && <span class={styles.icon}>🚀</span>}
                     {props.text}
                 </a>
             ) : (
                 <button class={buttonObj} disabled={props.disabled}>
-                    {props.showIcon && <span class="icon">🚀</span>}
+                    {props.showIcon && <span class={styles.icon}>🚀</span>}
                     {props.text}
                 </button>
             )}
