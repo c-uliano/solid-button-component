@@ -1,6 +1,6 @@
 @import "/src/_colors";
 
-.button {
+.btn {
     color: black;
     padding: 4px 8px;
     cursor: pointer;
@@ -8,9 +8,10 @@
     border: none;
     background: transparent;
     transition: .25s ease;
+    font-size: 1em;
 
     &:hover, &:active, &:focus {
-        background-color: $default-50;
+        background-color: $default-80;
     }
 
     &[disabled] {
@@ -30,7 +31,7 @@
         color: white;
         
         &:hover, &:active, &:focus {
-            background-color: $default-50;
+            background-color: $default-80;
         }
     }
     
@@ -60,14 +61,17 @@
     }
 
     &.sm {
-
+        font-size: .8em;
+        padding: 2px 4px;
     }
 
     &.md {
         font-size: 1em;
+        padding: 4px 8px;
     }
 
     &.lg {
-
+        font-size: 1.5em;
+        padding: 8px 16px;
     }
 }

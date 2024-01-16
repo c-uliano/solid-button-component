@@ -1,5 +1,7 @@
 # Solid button component w/TypeScript
 
+Constantly learning by building stuff.
+
 Creating a SolidJS Button component that is highly customizable
 
 ## Customizations includes: 

@@ -16,7 +16,7 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
     const buttonObj = [
-        styles.button,
+        styles.btn,
         props.variant && styles[props.variant],
         props.color && styles[props.color],
         props.size && styles[props.size],

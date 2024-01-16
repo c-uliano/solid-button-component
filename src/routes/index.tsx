@@ -8,10 +8,20 @@ export default function Home() {
             <Title>Solid Button Component</Title>
             <h1>Home page</h1>
             {/* <Counter /> */}
-            <Button text={'Disabled'} variant={'text'} uppercase={true} disabled={true} />
-            <Button text={'Hello'} variant={'text'} uppercase={true} />
-            <Button text={'Test 2'} color={'warning'} variant={'contained'} />
-            <Button text={'A Link'} href={'#'} variant={'outlined'} />
+            <div style={{'display': 'flex', "justify-content": "center", 'align-items': 'center'}}>
+                <div style={{'margin': '0 5px'}}>
+                    <Button text={'Disabled'} variant={'text'} uppercase={true} disabled={true} />
+                </div>
+                <div style={{'margin': '0 5px'}}>
+                    <Button text={'Lg Buton'} variant={'text'} uppercase={true} size={'lg'} />
+                </div>
+                <div style={{'margin': '0 5px'}}>
+                    <Button text={'Test 2'} color={'warning'} variant={'contained'} />
+                </div>
+                <div style={{'margin': '0 5px'}}>
+                    <Button text={'A Link'} href={'#'} variant={'outlined'} />
+                </div>
+            </div>
         </main>
     );
 }
