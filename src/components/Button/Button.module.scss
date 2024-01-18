@@ -1,12 +1,12 @@
 @import "/src/_colors";
 
 .btn {
-    color: black;
-    padding: 4px 8px;
+    padding: 4px 8px; // TODO: update this with variables from the sizes below, when I get that far
     cursor: pointer;
-    border-radius: .25rem;
-    border: none;
-    background: transparent;
+    border-radius: var(--btn-radius);
+    color: var(--btn-color);
+    border: 1px solid var(--btn-border);
+    background: var(--btn-background);
     transition: .25s ease;
     font-size: 1em;
 
@@ -24,8 +24,15 @@
         background-color: $success;
         border-color: $success;
     }
+
+    &.text {
+        
+    }
     
     &.contained {
+        --btn-background: black;
+        --btn-border: black;
+        --btn-color: white;
         background-color: black;
         border: 2px solid black;
         color: white;
@@ -49,15 +56,15 @@
     }
 
     &.br-slight {
-
+        --btn-radius: .125em;
     }
 
     &.br-curved {
-
+        --btn-radius: .5em;
     }
 
     &.br-round {
-
+        --btn-radius: 10em;
     }
 
     &.sm {
