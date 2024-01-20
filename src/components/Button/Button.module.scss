@@ -11,7 +11,7 @@
     font-size: 1em;
 
     &:hover, &:active, &:focus {
-        background-color: $default-80;
+        background-color: $black-80;
     }
 
     &[disabled] {
@@ -38,7 +38,7 @@
         color: white;
         
         &:hover, &:active, &:focus {
-            background-color: $default-80;
+            background-color: $black-80;
         }
     }
     
