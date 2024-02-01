@@ -1,13 +1,15 @@
 import { createSignal } from 'solid-js';
 import styles from './Button.module.scss';
 import { Variant, BRadius, Size, Color} from '~/types';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface ButtonProps {
     text: string;
     variant?: Variant;
     color?: Color; // whatever you enter has to have a class by that same name to style it up
     size?: Size;
-    showIcon?: boolean;
+    icon?: IconProp;
     uppercase?: boolean;
     borderRadius?: BRadius;
     disabled?: boolean;
@@ -29,12 +31,12 @@ const Button = (props: ButtonProps) => {
         <>
             {props.href ? (
                 <a class={buttonObj}>
-                    {props.showIcon && <span class={styles.icon}>🚀</span>}
+                    {props.icon && <span class={styles.icon}>🚀</span>}
                     {props.text}
                 </a>
             ) : (
                 <button class={buttonObj} disabled={props.disabled}>
-                    {props.showIcon && <span class={styles.icon}>🚀</span>}
+                    {props.icon && <span class={styles.icon}>🚀</span>}
                     {props.text}
                 </button>
             )}

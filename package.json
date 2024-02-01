@@ -16,8 +16,13 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@solidjs/meta": "^0.29.1",
     "@solidjs/router": "^0.8.3",
+    "solid-fontawesome": "^0.1.0",
     "solid-js": "^1.8.5",
     "solid-start": "^0.3.10"
   },

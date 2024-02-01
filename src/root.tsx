@@ -13,6 +13,13 @@ import {
   Title,
 } from "solid-start";
 import "./root.scss";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons'
+
+// This exports the whole icon packs for Brand and Solid.
+library.add(fas, fab, far);
 
 export default function Root() {
   return (
