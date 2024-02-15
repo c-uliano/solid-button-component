@@ -1,7 +1,7 @@
 import { createSignal } from 'solid-js';
 import styles from './Button.module.scss';
 import { Variant, BRadius, Size, Color} from '~/types';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from 'solid-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface ButtonProps {
